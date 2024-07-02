@@ -1,0 +1,18 @@
+/* step 1= creatre a driver loader.."Class.forName("com.mysql.cj.jdbc.Driver")"
+			 * 
+			 * step 2= establish the connection between the java code(eclipse) and the database mysql"
+			 *			using the command "Connection con=DriverManager.getConnection(url,username,password);
+			 * 			-->url=" jdbc:mysql://localhost:3306/Database_name_optional ";
+			 * 			-->username= "sql_username_optional" (eg:: 'root')
+			 * 			-->password= "sql_password" (eg:: 'root')
+			 * 
+			 * step 3= creating Sql statements: 3 types...
+			 * 			-->1. Statement s= con.createStatement();----> should be used only for "DDL" language.
+			 * 			-->2. PreparedStatement ps=con.prepareStatement(sql);----> should be used only for "DML" language. 
+			 * 			-->3. CallableStatement;
+			 * 
+			 * step 4 = execution of query: 3 types...
+			 * 			-->1. s.executeQuery(sql);------>should be used only for "DDL" language.
+			 * 			-->2. s.execute(sql);------>should be used only for "DDL" & "DML" language.
+			 * 			-->3. ps.executeUpdate();------>should be used only for "DML" language.
+			 */
